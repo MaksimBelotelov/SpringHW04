@@ -13,7 +13,7 @@ import lombok.NoArgsConstructor;
 public class Person {
     private int id;
     @NotEmpty
-    @Pattern(regexp = "^[a-zA-Z]*$", message = "Name should consist only letters")
+    @Pattern(regexp = "^[a-zA-Zа-яА-Я]*$", message = "Name should consist only letters")
     private String name;
     @Pattern(regexp = "\\+\\d+", message = "Telephone number consist of digits or + sign")
     private String phone;

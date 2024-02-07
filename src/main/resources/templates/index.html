@@ -21,6 +21,16 @@
             <td th:text="${p.getPhone()}"></td>
             <td th:text="${p.getEmail()}"></td>
             <td th:text="${p.getNote()}"></td>
+            <td>
+                <form th:method="GET" th:action="@{/delete/{id}(id=${p.getId()})}">
+                    <button type="submit" class="btn btn-primary">Delete</button>
+                </form>
+            </td>
+            <td>
+                <form th:method="GET" th:action="@{/update/{id}(id=${p.getId()})}">
+                    <button type="submit" class="btn btn-primary">Edit</button>
+                </form>
+            </td>
         </tr>
     </table>
     <form th:method="GET" th:action="@{/new}">
